@@ -1,18 +1,7 @@
 import numpy as np
 
 def backward_propagation(A, X, Y):
-    """
-    Implements the backward propagation, calculating gradients
-    
-    Arguments:
-    parameters -- python dictionary containing our parameters 
-    A -- the output of the neural network of shape (1, number of examples)
-    X -- input data of shape (n_x, number of examples)
-    Y -- "true" labels vector of shape (n_y, number of examples)
-    
-    Returns:
-    grads -- python dictionary containing gradients with respect to different parameters
-    """
+
     m = X.shape[1]
     
     # Backward propagation: calculate dW, db.
@@ -26,16 +15,6 @@ def backward_propagation(A, X, Y):
     return grads
 
 def update_parameters(parameters, grads, learning_rate = 1.2):
-    """
-    Updates parameters using the gradient descent update rule
-    
-    Arguments:
-    parameters -- python dictionary containing parameters 
-    grads -- python dictionary containing gradients 
-    
-    Returns:
-    parameters -- python dictionary containing updated parameters 
-    """
     # Retrieve each parameter from the dictionary "parameters".
     W = parameters["W"]
     b = parameters["b"]
